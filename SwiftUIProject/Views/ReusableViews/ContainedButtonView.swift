@@ -16,12 +16,12 @@ struct ContainedButtonView: View {
     var action : () -> Void
     
     var body: some View {
-        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+        Button(action: action) {
             Text(text)
-            .fontWeight(.bold)
-            .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-            .foregroundColor(textColor)
-            .padding()
+                .fontWeight(.bold)
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                .foregroundColor(textColor)
+                .padding()
         }.background(color).cornerRadius(4)
     }
 }

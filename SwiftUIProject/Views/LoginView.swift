@@ -69,7 +69,7 @@ struct LoginView: View {
                     self.signInIsVisible.toggle()
                 }
             ).padding(.leading).padding(.trailing)
-            .sheet(isPresented: $signInIsVisible, content: {Text("Sign up now")})
+            .sheet(isPresented: $signInIsVisible, content: {SignUpView()})
 
         }
         
