@@ -1,0 +1,6 @@
+framework module Pods_SwiftUIInstagramTests {
+  umbrella header "Pods-SwiftUIInstagramTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
