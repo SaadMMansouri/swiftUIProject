@@ -9,11 +9,11 @@
 import SwiftUI
 
 struct TextButtonView: View {
-    
+    @Environment(\.colorScheme) var colorScheme
+
     var sentence : String = "sentence before"
     var text : String = "button"
     var color : Color = .clear
-    var textColor : Color = .black
     var action : () -> Void
     
     var body: some View {
@@ -24,7 +24,7 @@ struct TextButtonView: View {
                 .fontWeight(.bold)
                 
         }
-        .foregroundColor(textColor)
+        .foregroundColor(colorScheme == .dark ? .white : .black)
         .multilineTextAlignment(.center)
     }
 }

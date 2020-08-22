@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4C1F823324ED575700CD0993"
-               BuildableName = "Instagram.app"
+               BuildableName = "SwiftUIInstagram.app"
                BlueprintName = "SwiftUIInstagram"
                ReferencedContainer = "container:SwiftUIInstagram.xcodeproj">
             </BuildableReference>
@@ -65,14 +65,18 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4C1F823324ED575700CD0993"
-            BuildableName = "Instagram.app"
+            BuildableName = "SwiftUIInstagram.app"
             BlueprintName = "SwiftUIInstagram"
             ReferencedContainer = "container:SwiftUIInstagram.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "-FIRAnalyticsDebugEnabled"
+            argument = "-noFIRAnalyticsDebugEnabled"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-FIRDebugDisabled"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
@@ -88,7 +92,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4C1F823324ED575700CD0993"
-            BuildableName = "Instagram.app"
+            BuildableName = "SwiftUIInstagram.app"
             BlueprintName = "SwiftUIInstagram"
             ReferencedContainer = "container:SwiftUIInstagram.xcodeproj">
          </BuildableReference>
