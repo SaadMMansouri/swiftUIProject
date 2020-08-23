@@ -7,15 +7,21 @@
 //
 
 import Foundation
-import SwiftUI
+import FirebaseFirestoreSwift
 
-struct PostEntity : Identifiable {
-    var id = UUID()
+struct PostEntity : Identifiable , Codable {
+    @DocumentID var id : String? = UUID().uuidString
     
     var user : String
     var description : String
     var numberOfLikes : Int
-    var picture : Image
-    var createdAt : Date
+    var picture : String
+    var createdAt : Date = Date()
     
+    enum CodingKeys : String, CodingKey {
+        case user
+        case description
+        case numberOfLikes
+        case picture
+    }
 }

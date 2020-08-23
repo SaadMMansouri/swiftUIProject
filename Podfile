@@ -9,7 +9,7 @@ target 'SwiftUIInstagram' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
-  pod 'FirebaseFirestore'
+  pod 'FirebaseFirestoreSwift'
 
   target 'SwiftUIInstagramTests' do
     inherit! :search_paths

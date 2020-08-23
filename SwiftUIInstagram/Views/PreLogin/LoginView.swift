@@ -49,10 +49,12 @@ struct LoginView: View {
                     .edgesIgnoringSafeArea(.top)
                 
                 TextField("Phone, email or username", text: $email)
+                    .autocapitalization(.none)
                     .padding()
                     .background(Color.clear)
                     .cornerRadius(4)
                 SecureField("Password", text: $password)
+                    .autocapitalization(.none)
                     .padding()
                     .background(Color.clear)
                     .cornerRadius(4)

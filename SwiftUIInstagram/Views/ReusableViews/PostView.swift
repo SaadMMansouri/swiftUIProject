@@ -32,14 +32,14 @@ struct PostView: View {
                 }
             }.padding()
             post_picture
-                .frame(height : 300)
-                .frame(minWidth : 0, maxWidth: .infinity).background(Color.init(red: 0.95, green: 0.95, blue: 0.95))
-            VStack{
+                .frame(minWidth : 0, maxWidth: .infinity)
+            VStack(spacing: 8){
                 HStack{
-                    Image(systemName: "heart")
-                    Image(systemName: "bubble.right")
+                    Image(systemName: "heart").font(.system(size: 25))
+                    Image(systemName: "bubble.right").font(.system(size: 25))
+                    Image(systemName: "paperplane").font(.system(size: 25))
                     Spacer()
-                    Image(systemName: "bookmark")
+                    Image(systemName: "bookmark").font(.system(size: 25))
                 }
                 HStack{
                     Text("\(post_numberOfLikes) likes").fontWeight(.medium)

@@ -43,11 +43,13 @@ struct SignUpView: View {
                     .frame(minWidth: 0, maxWidth: .infinity)
                 
                 TextField("Email", text: $email)
+                    .autocapitalization(.none)
                     .padding()
                     .background(Color.clear)
                     .cornerRadius(4)
                 
                 SecureField("Password", text: $password)
+                    .autocapitalization(.none)
                     .padding()
                     .background(Color.clear)
                     .cornerRadius(4)

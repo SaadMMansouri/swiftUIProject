@@ -29,6 +29,7 @@
 		4C5254E424EF08EB00938DFB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C5254E324EF08EB00938DFB /* GoogleService-Info.plist */; };
 		4CB1B32824EDE6EB00B0D278 /* ProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB1B32724EDE6EB00B0D278 /* ProfilView.swift */; };
 		4CB1B32A24EDE91100B0D278 /* StoryCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB1B32924EDE91100B0D278 /* StoryCircleView.swift */; };
+		4CB82C6424F2B48B00BB9224 /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB82C6324F2B48B00BB9224 /* PostsViewModel.swift */; };
 		D2EBBD760BF05D066FD80482 /* Pods_SwiftUIInstagram_SwiftUIInstagramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7783F0A9B730FF94611DDE /* Pods_SwiftUIInstagram_SwiftUIInstagramUITests.framework */; };
 		E34DFE41D8942932A7AD7739 /* Pods_SwiftUIInstagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F05890D7D2A4672B3DCEE0 /* Pods_SwiftUIInstagram.framework */; };
 /* End PBXBuildFile section */
@@ -80,6 +81,7 @@
 		4C5254E324EF08EB00938DFB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4CB1B32724EDE6EB00B0D278 /* ProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilView.swift; sourceTree = "<group>"; };
 		4CB1B32924EDE91100B0D278 /* StoryCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCircleView.swift; sourceTree = "<group>"; };
+		4CB82C6324F2B48B00BB9224 /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
 		5A71CA568FE62C44408C5D10 /* Pods-SwiftUIInstagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIInstagram.release.xcconfig"; path = "Target Support Files/Pods-SwiftUIInstagram/Pods-SwiftUIInstagram.release.xcconfig"; sourceTree = "<group>"; };
 		75F05890D7D2A4672B3DCEE0 /* Pods_SwiftUIInstagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUIInstagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E25BF663E252AADAF220853 /* Pods-SwiftUIInstagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIInstagramTests.release.xcconfig"; path = "Target Support Files/Pods-SwiftUIInstagramTests/Pods-SwiftUIInstagramTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 		4C1F823624ED575700CD0993 /* SwiftUIInstagram */ = {
 			isa = PBXGroup;
 			children = (
+				4CB82C6224F2AB2100BB9224 /* ViewModels */,
 				4C5254E324EF08EB00938DFB /* GoogleService-Info.plist */,
 				4C1F826E24EDCB2A00CD0993 /* Models */,
 				4C1F826924EDAB6600CD0993 /* Views */,
@@ -251,6 +254,14 @@
 				4C1F826D24EDCAFB00CD0993 /* Tabs */,
 			);
 			path = UserSpace;
+			sourceTree = "<group>";
+		};
+		4CB82C6224F2AB2100BB9224 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4CB82C6324F2B48B00BB9224 /* PostsViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		BA6A35C093964895E74B245A /* Frameworks */ = {
@@ -507,6 +518,7 @@
 				4C4283C024F06FC2001676CC /* FirebaseSessionManager.swift in Sources */,
 				4CB1B32824EDE6EB00B0D278 /* ProfilView.swift in Sources */,
 				4C1F826824EDA62000CD0993 /* HomeView.swift in Sources */,
+				4CB82C6424F2B48B00BB9224 /* PostsViewModel.swift in Sources */,
 				4C5254DA24EEBAAA00938DFB /* LoginView.swift in Sources */,
 				4C5254E024EEF9FF00938DFB /* SignUpView.swift in Sources */,
 				4C5254DC24EED62100938DFB /* ContainedButtonView.swift in Sources */,
@@ -686,11 +698,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIInstagram/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				INFOPLIST_FILE = SwiftUIInstagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mansouri.saad.SwiftUIInstagram;
 				PRODUCT_NAME = SwiftUIInstagram;
 				SWIFT_VERSION = 5.0;
