@@ -24,12 +24,18 @@ struct DashboardView: View {
                     Text("Home")
                 }
             }.tag(0)
+            SelectPictureView().tabItem{
+                VStack{
+                    Image(systemName : "plus.square")
+                    Text("Add")
+                }
+            }.tag(1)
             ProfilView().tabItem{
                 VStack{
                     Image(systemName : "person")
                     Text("Profil")
                 }
-            }.tag(1)
+            }.tag(2)
         }
         
     }

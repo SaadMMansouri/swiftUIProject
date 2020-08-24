@@ -14,7 +14,10 @@ struct HomeView: View {
     
     @State private var scrollTarget: Int?
     @Environment(\.colorScheme) var colorScheme
-
+    
+    @State private var image: UIImage?
+    @State private var showImagePicker: Bool = false
+    
     var body: some View {
         NavigationView {
             VStack{
@@ -42,7 +45,9 @@ struct HomeView: View {
             }.navigationBarTitle("", displayMode: .inline)
             .navigationBarItems(
                 leading: HStack {
-                    Button(action: {}) {
+                    Button(action: {
+                        self.showImagePicker = true
+                    }) {
                         Image(systemName: "camera")
                             .font(.system(size: 25))
                     }
@@ -69,6 +74,9 @@ struct HomeView: View {
             }.foregroundColor(
                 colorScheme == .dark ? .white : .black
             )
+        }.sheet(isPresented: $showImagePicker) {
+            ImagePicker(image: self.$image, isPresented: self.$showImagePicker, sourceType: .photoLibrary)
+
         }
     }
 }

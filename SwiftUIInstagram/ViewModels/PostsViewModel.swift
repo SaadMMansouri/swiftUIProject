@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import FirebaseStorage
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
@@ -28,4 +29,5 @@ class PostsViewModel : ObservableObject {
             }
         }
     }
+    
 }
